@@ -31,6 +31,10 @@ class OnBoardingPage extends StatelessWidget {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => const MyPage()));
         },
-        next: const Icon(Icons.arrow_forward));
+        next: const Icon(Icons.arrow_forward)
+    );
   }
+  PageDecoration getPageDecoration(){
+
+  }//클래스에 관련된 내용 만을 다루어야 함
 }
