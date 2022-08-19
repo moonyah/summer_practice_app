@@ -28,13 +28,18 @@ class MyPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               'Main Screen',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
             ElevatedButton(
-                onPressed: () {}, child: const Text('Go to onboarding screen'))
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => const OnBoardingPage()));
+                },
+                child: const Text('Go to onboarding screen'))
           ],
         ),
       ),
