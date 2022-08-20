@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:summer_practice_app/listview.dart';
 
 import 'onboarding.dart';
 
@@ -39,7 +40,13 @@ class MyPage extends StatelessWidget {
                   Navigator.of(context).pushReplacement(
                       MaterialPageRoute(builder: (context) => const OnBoardingPage()));
                 },
-                child: const Text('Go to onboarding screen'))
+                child: const Text('Go to onboarding screen')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => const ListViewPage()));
+                },
+                child: const Text('Go to ListView Page'))
           ],
         ),
       ),
