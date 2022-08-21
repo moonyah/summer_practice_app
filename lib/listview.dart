@@ -49,6 +49,7 @@ class _ListViewPageState extends State<ListViewPage> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width * 0.6;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -83,6 +84,10 @@ class _ListViewPageState extends State<ListViewPage> {
                       ),
                       const SizedBox(
                         height: 10,
+                      ),
+                      SizedBox(
+                        width: width,
+                        child: Text(description[index]),
                       )
                     ],
                   ),
