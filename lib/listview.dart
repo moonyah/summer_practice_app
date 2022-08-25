@@ -54,7 +54,7 @@ class _ListViewPageState extends State<ListViewPage> {
           return Dialog(
             child: Container(
               width: MediaQuery.of(context).size.width * 0.7,
-              height: 380,
+              height: 330,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.white,
@@ -63,11 +63,34 @@ class _ListViewPageState extends State<ListViewPage> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(image, width: 200, height: 200),
+                    child: Image.asset(image, width: 200, height: 160),
                   ), // circleAvatar 위젯이랑 비슷하고 이미지를 사각형으로 출력해줌
                   const SizedBox(
-                    height: 10,
-                  )
+                    height: 5,
+                  ),
+                  Text(title,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black54)),
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Text(
+                      description,
+                      maxLines: 3, // description 이 최대 몇 줄까지 보여질 것인지 지정
+                      style: TextStyle(fontSize: 15, color: Colors.grey[600]),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(Icons.close),
+                      label: const Text('close'))
                 ],
               ),
             ),
@@ -115,7 +138,7 @@ class _ListViewPageState extends State<ListViewPage> {
                           style: const TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
-                              color: Colors.grey),
+                              color: Colors.black54),
                         ),
                         const SizedBox(
                           height: 10,
@@ -125,7 +148,7 @@ class _ListViewPageState extends State<ListViewPage> {
                           child: Text(
                             description[index],
                             style: TextStyle(
-                                fontSize: 15, color: Colors.grey[500]),
+                                fontSize: 15, color: Colors.grey[600]),
                           ),
                         )
                       ],
