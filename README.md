@@ -1,6 +1,5 @@
 # summer_practice_app
-
-A new Flutter app project.
+Flutter app project.
 
 ## Getting Started
 
