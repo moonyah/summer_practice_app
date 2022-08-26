@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
+
 class ListViewPage extends StatefulWidget {
   const ListViewPage({Key? key}) : super(key: key);
 
@@ -103,6 +105,17 @@ class _ListViewPageState extends State<ListViewPage> {
     double width = MediaQuery.of(context).size.width * 0.6;
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => const MyPage()));
+              },
+              icon: const Icon(
+                Icons.home,
+                color: Colors.black54,
+              ))
+        ],
         title: const Text(
           'ListView',
           style: TextStyle(color: Colors.grey),

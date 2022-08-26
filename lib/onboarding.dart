@@ -61,8 +61,8 @@ class OnBoardingPage extends StatelessWidget {
     //클래스에 관련된 내용 만을 다루어야 함
     return const PageDecoration(
         titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        bodyTextStyle: TextStyle(fontSize: 18, color: Colors.green),
+        bodyTextStyle: TextStyle(fontSize: 18, color: Colors.blue),
         imagePadding: EdgeInsets.only(top: 40),
-        pageColor: Colors.limeAccent);
+        pageColor: Colors.white);
   }
 }
