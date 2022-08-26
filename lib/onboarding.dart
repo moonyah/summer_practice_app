@@ -16,7 +16,7 @@ class OnBoardingPage extends StatelessWidget {
               body: 'This is the first page'
                   'We are making on-boarding screens'
                   'It is very interesting',
-              image: Image.asset('image/page1.png'),
+              image: Image.asset('image/onboarding/page1.png'),
               decoration: getPageDecoration()),
           PageViewModel(
               // 각 페이지 구성 담당
@@ -24,7 +24,7 @@ class OnBoardingPage extends StatelessWidget {
               body: 'This is the second page'
                   'We are making on-boarding screens'
                   'It is very interesting',
-              image: Image.asset('image/page2.png'),
+              image: Image.asset('image/onboarding/page2.png'),
               decoration: getPageDecoration()),
           PageViewModel(
               // 각 페이지 구성 담당
@@ -32,7 +32,7 @@ class OnBoardingPage extends StatelessWidget {
               body: 'This is the third page'
                   'We are making on-boarding screens'
                   'It is very interesting',
-              image: Image.asset('image/page3.png'),
+              image: Image.asset('image/onboarding/page3.png'),
               decoration: getPageDecoration()),
         ],
         done: const Text('done'),
