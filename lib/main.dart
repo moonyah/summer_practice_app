@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:summer_practice_app/listview.dart';
 
+import 'likebuttonlistview.dart';
 import 'onboarding.dart';
 
 void main() {
@@ -37,16 +38,22 @@ class MyPage extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const OnBoardingPage()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const OnBoardingPage()));
                 },
                 child: const Text('Go to onboarding screen')),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const ListViewPage()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const ListViewPage()));
                 },
-                child: const Text('Go to ListView Page'))
+                child: const Text('Go to ListView Page')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const LikeButtonListView()));
+                },
+                child: const Text('Go to ListView Page with like button'))
           ],
         ),
       ),
