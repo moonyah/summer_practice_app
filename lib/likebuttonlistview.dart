@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:summer_practice_app/cutethings_page.dart';
 
 import 'model.dart';
 
@@ -56,17 +57,22 @@ class _LikeButtonListViewState extends State<LikeButtonListView> {
       ),
       body: ListView.builder(
           itemCount: cutethingsData.length,
-          itemBuilder: (context, index){
+          itemBuilder: (context, index) {
             return Card(
               child: ListTile(
-                title: Text(
-                  cutethingsData[index].name
-                ),
+                title: Text(cutethingsData[index].name),
                 leading: SizedBox(
                   height: 50,
                   width: 50,
                   child: Image.asset(cutethingsData[index].imgPath),
                 ),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => CuteThingsPage(cuteThings: cutethingsData[index],)));
+                  // 페이지 이동 시, 데이터들이 cuteThings 로 전달될 것임
+                  // CuteThingsPage 위젯 내에서 cuteThings 이용해 화면에 필요한 데이터들 출력 가능
+                  debugPrint(cutethingsData[index].name);
+                },
               ),
             );
           }),
