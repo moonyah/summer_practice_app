@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:summer_practice_app/cutethings_page.dart';
 
+import 'main.dart';
 import 'model.dart';
 
 class LikeButtonListView extends StatefulWidget {
@@ -53,6 +54,17 @@ class _LikeButtonListViewState extends State<LikeButtonListView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => const MyPage()));
+              },
+              icon: const Icon(
+                Icons.home,
+                color: Colors.black54,
+              ))
+        ],
         title: Text('ListView'),
       ),
       body: ListView.builder(

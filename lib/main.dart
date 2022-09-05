@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:summer_practice_app/listview.dart';
+import 'package:summer_practice_app/responsive_page.dart';
 
 import 'likebuttonlistview.dart';
 import 'onboarding.dart';
@@ -13,8 +14,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: OnBoardingPage(),
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 30,
+            color: Colors.white
+          )
+        )
+      ),
+      home: const OnBoardingPage(),
     );
   }
 }
@@ -34,26 +45,36 @@ class MyPage extends StatelessWidget {
           children: [
             const Text(
               'Main Screen',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.black),
             ),
+            const SizedBox(height: 5),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) => const OnBoardingPage()));
                 },
                 child: const Text('Go to onboarding screen')),
+            const SizedBox(height: 5),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) => const ListViewPage()));
                 },
                 child: const Text('Go to ListView Page')),
+            const SizedBox(height: 5),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) => const LikeButtonListView()));
                 },
-                child: const Text('Go to ListView Page with like button'))
+                child: const Text('Go to ListView Page with like button')),
+            const SizedBox(height: 5),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const ResponsivePage()));
+                },
+                child: const Text('Go to Responsive Page'))
           ],
         ),
       ),
