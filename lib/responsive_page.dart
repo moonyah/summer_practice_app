@@ -33,7 +33,8 @@ class _ResponsivePageState extends State<ResponsivePage> {
           children: [
             Text('Width: ' + MediaQuery.of(context).size.width.toString()),
             Text('Height: ' + MediaQuery.of(context).size.height.toString()),
-            Text('Aspect Ratio: ' + MediaQuery.of(context).size.aspectRatio.toStringAsFixed(2))
+            Text('Aspect Ratio: ' + MediaQuery.of(context).size.aspectRatio.toStringAsFixed(2)),
+            Text('Orientation: ' + MediaQuery.of(context).orientation.toString())
           ],
         ),
       ),
