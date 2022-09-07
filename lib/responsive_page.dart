@@ -10,10 +10,14 @@ class ResponsivePage extends StatefulWidget {
 }
 
 class _ResponsivePageState extends State<ResponsivePage> {
+
   @override
   Widget build(BuildContext context) {
+
+    final currentWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: currentWidth < 600 ? Colors.deepPurple[300] : Colors.red,
       appBar: AppBar(
         actions: [
           IconButton(
@@ -29,14 +33,15 @@ class _ResponsivePageState extends State<ResponsivePage> {
         title: const Text('MediaQuery'),
       ),
       body: Center(
-        child: Column(
-          children: [
-            Text('Width: ' + MediaQuery.of(context).size.width.toString()),
-            Text('Height: ' + MediaQuery.of(context).size.height.toString()),
-            Text('Aspect Ratio: ' + MediaQuery.of(context).size.aspectRatio.toStringAsFixed(2)),
-            Text('Orientation: ' + MediaQuery.of(context).orientation.toString())
-          ],
-        ),
+        // child: Column(
+        //   children: [
+        //     Text('Width: ' + MediaQuery.of(context).size.width.toString()),
+        //     Text('Height: ' + MediaQuery.of(context).size.height.toString()),
+        //     Text('Aspect Ratio: ' + MediaQuery.of(context).size.aspectRatio.toStringAsFixed(2)),
+        //     Text('Orientation: ' + MediaQuery.of(context).orientation.toString())
+        //   ],
+        // ),
+        child: Text(currentWidth.toString()),
       ),
     );
   }
