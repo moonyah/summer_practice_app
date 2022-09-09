@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:summer_practice_app/desktop_body.dart';
+import 'package:summer_practice_app/mobile_body.dart';
+import 'package:summer_practice_app/reponsive_layout.dart';
 
 import 'main.dart';
 
@@ -16,23 +19,8 @@ class _ResponsivePageState extends State<ResponsivePage> {
 
     //final currentWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
+    return const Scaffold(
       //backgroundColor: currentWidth < 600 ? Colors.deepPurple[300] : Colors.red,
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const MyPage()));
-              },
-              icon: const Icon(
-                Icons.home,
-                color: Colors.black54,
-              ))
-        ],
-        title: const Text('MediaQuery'),
-      ),
-      body: const Center(
         // child: Column(
         //   children: [
         //     Text('Width: ' + MediaQuery.of(context).size.width.toString()),
@@ -42,7 +30,10 @@ class _ResponsivePageState extends State<ResponsivePage> {
         //   ],
         // ),
         //child: Text(currentWidth.toString()),
-      ),
+        body: ResponsiveLayout(
+          mobileBody: MobileBody(),
+          desktopBody: DesktopBody(),
+        ),
     );
   }
 }
