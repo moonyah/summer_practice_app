@@ -6,7 +6,7 @@ import 'model.dart';
 class CuteThingsPage extends StatefulWidget {
   const CuteThingsPage({Key? key, required this.cuteThings}) : super(key: key);
 
-  // 생성자에 추가해 준다. 널 값을 가질 수 없기 때문에 required 붙임
+  // 생성자에 추가. 널 값을 가질 수 없기 때문에 required
 
   final CuteThings cuteThings;
 
