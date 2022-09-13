@@ -82,7 +82,7 @@ class _LikeButtonListViewState extends State<LikeButtonListView> {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => CuteThingsPage(cuteThings: cutethingsData[index],)));
                   // 페이지 이동 시, 데이터들이 cuteThings 로 전달될 것임
-                  // CuteThingsPage 위젯 내에서 cuteThings 이용해 화면에 필요한 데이터들 출력 가능
+                  // CuteThingsPage 위젯 내에서 cuteThings 이용해 필요한 데이터들 출력 가능
                   debugPrint(cutethingsData[index].name);
                 },
               ),
